@@ -51,6 +51,14 @@
 <!-- End Choose Area -->
 
 <style>
+.target {
+  background: url(assets/images/banner/Banner.webp);
+  padding: 50px 0;
+  margin-top: 35px;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}  
 .custom-padding {
     padding: 35px 9px 35px 25px;
 }
@@ -77,19 +85,73 @@
     position: absolute;
 }
 
+@media (min-width: 320px) and (max-width: 525px){
+  .target .row {
+    display: block !important;
+  }
+  p.ethics-cutom {
+    font-size: 15px;
+  }
+  .sec-title .title{
+    margin-bottom: 6px;
+  }
+  .custom-padding {
+    padding: 35px 9px 35px 25px;
+    margin-bottom: 20px;
+  }
+  .read-more-text {
+      max-height: 55px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+  }
+
+  .read-more-text.expanded {
+      max-height: 3000px; /* safe for any text */
+  }
+  .target-block {
+      height: auto;
+      overflow: visible;
+  }
+
+  .read-more-btn {
+    position: relative !important;
+  }
+  .target {
+    background: url(assets/images/banner/Banner.webp);
+      background-size: cover;
+      padding: 15px 0;     
+      margin-top: 30px;
+      height: auto !important;
+      min-height: 100% !important;
+      overflow: visible !important;
+  }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .target {
+    margin-top: 60px;
+  }
+  .read-more-text.expanded {
+    max-height: 4000px; /* safe for any text */
+  }
+}
 
 </style>
 <script>
 document.querySelectorAll('.read-more-btn').forEach(btn => {
     btn.addEventListener('click', function () {
         const text = this.previousElementSibling;
-        text.classList.toggle('expanded');
 
-        this.textContent = text.classList.contains('expanded')
-            ? 'Read Less'
-            : 'Read More';
+        if (text.style.maxHeight) {
+            text.style.maxHeight = null;
+            this.textContent = "Read More";
+        } else {
+            text.style.maxHeight = text.scrollHeight + "px";
+            this.textContent = "Read Less";
+        }
     });
 });
+
 </script>
 
 

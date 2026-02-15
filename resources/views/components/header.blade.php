@@ -23,7 +23,7 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/banner/logo-new.webp" alt="logo">
+                        <img src="{{ asset('assets/images/banner/logo-new.webp') }}" alt="logo">
                     </a>
                 </div>
             </div>
@@ -34,7 +34,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand me-0" href="/">
-                    <img src="assets/images/banner/logo-new.webp" alt="logo" class="header-logo" >
+                    <img src="{{ asset('assets/images/banner/logo-new.webp') }}" alt="logo" class="header-logo" >
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
@@ -67,7 +67,7 @@
                     </ul>
                     <div class="others-option position-relative d-flex align-items-center">
                         <div class="option-item">
-                            <a href="courses-details.html" class="default-btn2">
+                            <a href="{{ route('contact-us') }}" class="default-btn2">
                                 Book Now
                                 <i class="bi bi-telephone ml-2"></i>
                             </a>
@@ -92,9 +92,9 @@
                 <div class="option-inner">
                     <div class="others-options justify-content-center d-flex align-items-center">
                         <div class="option-item">
-                            <a href="#" class="default-btn2">
+                            <a href="{{ route('contact-us') }}" class="default-btn2">
                                 Contact Us
-                                <img src="assets/images/icon/left-small.svg" alt="icon">
+                                <i class="bi bi-telephone ml-2"></i>
                             </a>
                         </div>
                     </div>

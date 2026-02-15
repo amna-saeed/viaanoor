@@ -799,7 +799,7 @@
     padding-bottom: 60px;
   }
   .newsletter-info {
-    padding: 60px 25px;
+    padding: 20px 20px;
   }
   .newsletter-info .shape8 {
     top: 20px;
@@ -908,7 +908,7 @@
     margin-bottom: 30px;
   }
   .testimonial-content p {
-    font-size: 16px;
+    font-size: 15px;
   }
   .testimonial-content .users-info {
     margin-top: 25px;
@@ -1146,7 +1146,7 @@
     margin-bottom: 20px;
   }
   .single-footer-widget.logo-info p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .single-footer-widget.logo-info .email {
     font-size: 16px;
@@ -1156,7 +1156,7 @@
     margin-bottom: 10px;
   }
   .single-footer-widget.links-info ul li a {
-    font-size: 16px;
+    font-size: 14px;
   }
   .single-footer-widget.app-info span {
     margin-bottom: 30px;
@@ -1204,8 +1204,8 @@
     margin-left: 0;
   }
   .copyright-area {
-    padding-top: 35px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
   .copyright-area .icon-info a {
     top: -25px;
@@ -2061,7 +2061,7 @@
     padding-bottom: 55px;
   }
   .pt-136 {
-    padding-top: 90px;
+    padding-top: 40px;
   }
   .ptb-110 {
     padding-top: 75px;
@@ -2071,7 +2071,7 @@
     padding-top: 75px;
   }
   .pb-110 {
-    padding-bottom: 75px;
+    padding-bottom: 0px;
   }
   .shapes {
     display: none;

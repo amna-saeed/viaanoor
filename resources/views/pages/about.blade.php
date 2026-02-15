@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <h1 class="fw-bold about-title aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">15+</h1>
+                    <h1 class="fw-bold about-title aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">10+</h1>
                     <h5 class="fw-bold exp-custom text-uppercase">YEARS OF EXPERIANCE</h5>
                     <p class="p-17">
                         ViAaNur is a leading institution dedicated to providing high-quality education and skill development. Our mission is to empower students with the knowledge, confidence, and creativity they need to excel academically and professionally.

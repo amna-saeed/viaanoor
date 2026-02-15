@@ -180,6 +180,14 @@
     background: #322f89;
     color: #fff;
 }
+@media (min-width: 320px) and (max-width: 525px){
+   .img-teams-xx {
+    border-radius: 65%;
+    width: 45%;
+    height: 150px;
+    }
+}
+
 </style>
 
 @stop

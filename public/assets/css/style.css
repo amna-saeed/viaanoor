@@ -748,7 +748,7 @@ Others Option For Responsive Area Style
   transform: scaleY(1);
 }
 .others-option-for-responsive .others-options {
-  background-color: var(--whiteColor);
+  background-color: #322f8933;
   text-align: center;
   padding: 15px;
 }
@@ -915,14 +915,15 @@ Others Option For Responsive Area Style
     background: #555;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal {
-    top: 1px;
+    top: 6px;
     padding: 0;
-    width: 35px;
+    width: 30px;
     height: 30px;
     font-size: 20px !important;
     padding-top: 3px;
     color: var(--mainColor);
   }
+ 
   .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal span {
     background-color: var(--mainColor);
     height: 4px;
@@ -2451,15 +2452,14 @@ Courses Area CSS
 }
 
 /*  */
-.target {
-  /* background: url(../images/banner/bg_1.jpg); */
+/* .target {
   background: url(../images/banner/Banner.webp);
   padding: 50px 0;
   margin-top: 35px;
   background-position-y: top;
   background-position-x: center;
   background-repeat: no-repeat;
-}
+} */
 .fa-check-circle:before {
   content: "\f058";
 }
@@ -6843,3 +6843,87 @@ Go Top CSS
 .go-top:hover {
   transform: translateY(-7px);
 }/*# sourceMappingURL=style.css.map */
+
+
+@media (min-width: 320px) and (max-width: 525px){
+  .video-bg{
+    width: 100%;
+    height: 315px;
+  }
+  .image-1, .image-2, .image-3 {
+    display: none;
+  }
+  .experience-info.d-flex.align-items-center.justify-content-between {
+    margin: 0px 30px 20px;
+  }
+  p.ethics-cutom {
+    font-size: 15px;
+  }
+  .sec-title .title{
+    margin-bottom: 6px;
+  }
+  .custom-padding {
+    padding: 35px 9px 35px 25px;
+    margin-bottom: 20px;
+  }
+  .newsletter-form form .form-group button {
+    top: 14%;
+    right: 3px;
+    border: 0;
+    position: absolute !important;
+    box-shadow: unset;
+    transform: translateY(-50%) !important;
+  }
+  .newsletter-info {
+    padding: 50px 40px;
+    border-radius: 10px;
+    background: #33308a;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .viaanur-banner-image{
+    padding: 75px 0px 0px;
+  }
+  .about-img .img_1{
+    display: none;
+  }
+  .exp-custom , .sec-title-about-course h2{
+    font-size: 22px;
+  }
+  .container.pading-top-100 {
+    padding: 20px 15px 10px;
+  }
+  .custom-bullets li {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .mr-bx-100{
+    margin: 10px 0px;
+  }
+  .counter-icon .icon-img {
+    width: 55px;
+  }
+  .target-block-1 {
+    height: 155px;
+  }
+  .counter-icon .icon-img {
+    width: 55px;
+    padding-top: 10px;
+  }
+  .col-lg-12.mb-11-custom {
+    margin: 0px 0px 40px;
+  }
+  .thead-client {
+    font-size: 23px;
+  }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .image-1, .image-2, .image-3 {
+    display: none;
+  }
+  .testimonial-content .testimonial-slider-info .owl-nav .owl-prev, .testimonial-content .testimonial-slider-info .owl-nav .owl-next {
+    bottom: -65px !important;
+  }
+}

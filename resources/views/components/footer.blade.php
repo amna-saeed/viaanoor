@@ -88,7 +88,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-md-5">
                         <div class="copyright-content" data-cue="slideInUp">
-                            <p>© Copyright 2026 | ViAaNoor | All Rights Reserved</p>
+                            <p>© Copyright 2026 | ViaANur | All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
