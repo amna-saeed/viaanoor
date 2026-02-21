@@ -200,6 +200,9 @@ p:last-child {
     background-color: #322e7c7a;
     border-radius: 7px;
 }
+a.default-btn2.mini {
+  padding: 10px 20px;
+}
 .default-btn:hover {
   color: var(--whiteColor);
 }
