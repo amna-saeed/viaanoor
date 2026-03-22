@@ -9,7 +9,7 @@
                             <img src="assets/images/banner/logo-new.webp" alt="logo" class="footer-logo">
                         </a>
                     </div>
-                    <p>Lorem ipsum amet, consectetur adipiscing elit. Suspendis varius enim eros elementum tristique. Duis cursus.</p>
+                    <p>At ViAaNur Tutoring, we believe that every learner carries unique potential waiting to be cultivated. </p>
                     <ul class="list-unstyled ps-0 mb-0 social-link">
                         <li class="d-inline-block">
                             <a href="https://www.facebook.com/" target="_blank">
@@ -39,18 +39,8 @@
                     <h3>Legal</h3>
                     <ul class="list-unstyled ps-0 mb-0">
                         <li>
-                            <a href="blog-with-sidebar.html">
-                                Trems of Use
-                            </a>
-                        </li>
-                        <li>
                             <a href="terms-conditions.html">
-                                Tearm & Condition
-                            </a>
-                        </li>
-                        <li>
-                            <a href="courses-details.html">
-                                Payment Method
+                                Terms & Conditions
                             </a>
                         </li>
                         <li>
@@ -60,7 +50,7 @@
                         </li>
                         <li>
                             <a href="blog-standard.html">
-                                Licensencing
+                                Licensing
                             </a>
                         </li>
                     </ul>
@@ -70,14 +60,14 @@
                 <div class="single-footer-widget links-info" data-cue="slideInUp">
                     <h3>Contact Us</h3>
                     <ul class="address-icon">
-                        <li class="mb-3">
+                        <!-- <li class="mb-3">
                             <i class="bi bi-geo-alt-fill me-3 color-blue"></i>503 Old Buffalo Street Northwest #205, New York-3087.
+                        </li> -->
+                        <li class="mb-3">
+                            <i class="bi bi-phone me-3 color-blue"></i>+44 7507 719 318
                         </li>
                         <li class="mb-3">
-                            <i class="bi bi-phone me-3 color-blue"></i>+821 (2365) 456 90
-                        </li>
-                        <li class="mb-3">
-                            <i class="bi bi-envelope color-blue me-3"></i>support@gmail.com
+                            <i class="bi bi-envelope color-blue me-3"></i>admin@viaanur.com
                         </li>
                     </ul>
                 </div>
@@ -88,7 +78,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-md-5">
                         <div class="copyright-content" data-cue="slideInUp">
-                            <p>© Copyright 2026 | ViaANur | All Rights Reserved</p>
+                            <p>© Copyright 2026 | ViAaNur | All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

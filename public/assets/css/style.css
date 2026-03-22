@@ -55,12 +55,98 @@ span.ms-12 {
   margin-left: 17px;
   margin-top: 5px;
 }
+.bliink-inner{
+  background: #b2cd34;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* blink shine effect */
+.bliink-inner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  transform: skewX(-25deg);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink{
+  0%{
+      left: -75%;
+  }
+  100%{
+      left: 125%;
+  }
+}
+
+.bliink-inner1{
+  background: #322f89;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  animation: glowBlink 1.5s infinite alternate;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+@keyframes glowBlink{
+  0%{
+      box-shadow: 0 0 0px #322f89;
+  }
+  100%{
+      box-shadow: 0 0 10px #322f89, 0 0 18px #322f89;
+  }
+}
+
+
+/* .bliink-inner1{
+  background: #322f89;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  animation: pulseBlink 1.5s infinite;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@keyframes pulseBlink{
+  0%{
+      transform: scale(1);
+      opacity: 1;
+  }
+  50%{
+      transform: scale(1.05);
+      opacity: 0.8;
+  }
+  100%{
+      transform: scale(1);
+      opacity: 1;
+  }
+} */
 .single-courses-card{
-  height: 420px;
+  height: 463px;
   background: #ffffff;
 }
 img.img-fluid-team{
-  height: 233px;
+  height: 205px;
 }
 /*  */
 body {
@@ -231,20 +317,19 @@ i.bi.bi-telephone.ml-2 {
     display: inline-block;
 }
 .default-btn2 {
-     z-index: 1;
-    position: relative;
-    padding: 17px 30px;
-    border-radius: 6px;
-    display: inline-block;
-    color: #fff;
-    background: #322f89;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: var(--fontFamily);
-    text-decoration: none;
-    transition: all 0.3s 
-  ease-in-out;
-    border: none;
+  z-index: 1;
+  position: relative;
+  padding: 7px 13px;
+  border-radius: 6px;
+  display: inline-block;
+  color: #fff;
+  background: #322f89;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fontFamily);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .default-btn2 img {
@@ -273,7 +358,7 @@ i.bi.bi-telephone.ml-2 {
   background-color: #322f89;
 }
 img.users-course {
-  width: 27px;
+  width: 22px;
 }
 .section-title {
   margin-bottom: 40px;
@@ -292,7 +377,7 @@ img.users-course {
 .section-title h2 {
   line-height: 1.3;
   color: var(--blackColor);
-  font-size: 44px;
+  font-size: 35px;
   font-weight: 600;
   font-family: var(--headingFontFamily);
 }
@@ -403,8 +488,8 @@ Header Area CSS
   padding-bottom: 22px;
 }
 .navbar-area.is-sticky {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   top: 0;
   left: 0;
   width: 100%;
@@ -455,7 +540,7 @@ Header Area CSS
   color: var(--blackColor);
   transition: var(--transition);
   font-family: var(--fontFamily);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   padding-left: 0;
   padding-top: 0;
@@ -992,6 +1077,7 @@ p.p-17 {
   top: 300px;
   z-index: -1;
   position: absolute;
+  width: 15px;
 }
 .banner-area .banner-shape2 img {
   animation-duration: 5s;
@@ -1005,6 +1091,7 @@ p.p-17 {
   z-index: -1;
   position: absolute;
   animation: movebounce 10s linear infinite;
+  width: 15px;
 }
 .banner-area .banner-shape4 {
   top: 485px;
@@ -1012,6 +1099,7 @@ p.p-17 {
   z-index: -1;
   position: absolute;
   animation: rotateme 10s linear infinite;
+  width: 25px;
 }
 .banner-area .banner-shape5 {
   left: 556px;
@@ -1243,23 +1331,29 @@ p.p-17 {
   cursor: pointer;
 }
 .banner-image .mentor-info .content h3 {
-  color: #000;
+  color: #fff;
   margin-bottom: 8px;
   transition: var(--transition);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
   font-family: var(--fontFamily);
   cursor: pointer;
 }
+.container.pading-top-1001 {
+    padding: 115px 0px 10px;
+}
 .banner-image .mentor-info .content span {
   color: var(--bodyColor);
   transition: var(--transition);
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   font-family: var(--fontFamily);
 }
+.same-wraps{
+  display: flex;
+}
 img.whatz-icon {
-    width: 60px;
+    width: 75px;
 }
 .banner-image .mentor-info::before {
   top: 0;
@@ -1614,8 +1708,8 @@ Categories Area CSS
   transition: var(--transition);
 }
 .single-categories-card .icon {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 30px;
 }
 .head-mission{
@@ -1638,7 +1732,7 @@ Categories Area CSS
 .single-categories-card h3 {
   color: #0c1327;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-family: var(--fontFamily);
 }
@@ -1721,7 +1815,7 @@ About Area CSS
   margin-bottom: 25px;
 }
 .about-image .image-1 img {
-  max-width: 222px;
+  max-width: 265px;
   border-radius: 10px;
 }
 .about-image .image-2 {
@@ -1732,7 +1826,7 @@ About Area CSS
   border-radius: 10px;
 }
 .about-image .image-3 {
-  margin-bottom: 50px;
+  margin-bottom: 13px;
   margin-left: -35px;
   margin-top: 45px;
 }
@@ -1741,22 +1835,23 @@ About Area CSS
   border-radius: 10px;
 }
 .about-image .experience-info {
-  padding: 25px 40px;
+  padding: 25px 38px;
   border-radius: 10px;
-  background: var(--Gradient, linear-gradient(100deg, #333282 7.82%, #b2cd34 87.12%));
-  margin-left: -35px;
+  background: var(--Gradient, linear-gradient(100deg, #9c9ac2 7.82%, #b2cd3466 87.12%));
+  margin-left: -30px;
   margin-right: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
+  width: 96%;
 }
 .about-image .experience-info .content h3 {
   margin-bottom: 0;
-  color: var(--whiteColor);
+  color: #322f89;
   font-size: 44px;
   font-weight: 700;
   font-family: var(--headingFontFamily);
 }
 .about-image .experience-info .content p {
-  color: var(--whiteColor);
+  color: #322f89;
   font-size: 18px;
   font-weight: 500;
 }
@@ -1876,19 +1971,17 @@ p.p-17 {
   font-weight: 600;
   color: black;
 }
-.sec-title-about-course span.title {
-    font-size: 17px;
-    font-weight: 600;
-    color: #322f89;
-}
+
 .title-new {
     font-size: 17px;
     font-weight: 600;
     color: #322f89;
 }
 .sec-title-about-course span.title {
-    font-size: 17px;
+    font-size: 25px;
     font-weight: 600;
+     font-weight: 600;
+    color: #322f89;
 }
 .sec-title-about-course {
     padding: 0px;
@@ -1900,7 +1993,7 @@ p.p-17 {
     margin: 40px 0px 40px;
 }
 .sec-title-about-course h2 {
-    font-size: 29px;
+    font-size: 22px;
     font-weight: 600;
     color: black;
     margin-bottom: 13px;
@@ -2331,15 +2424,15 @@ Courses Area CSS
   border-radius: 10px 10px 0px 0px;
 }
 .single-courses-card .image .price {
-  left: 30px;
-  bottom: 0;
+  left: 0px;
+  bottom: 181px;
   position: absolute;
-  padding: 9px 21px;
+  padding: 9px 10px;
   display: inline-block;
   color: var(--whiteColor);
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 13px 0px 0px 0px;
   background-color: var(--mainColor);
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   font-family: var(--fontFamily);
 }
@@ -2614,16 +2707,12 @@ a.btn.text-white.ps-0 {
 }
 .single-courses-card .content .list-info .title span {
   color: #878787;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   font-family: var(--fontFamily);
+  padding-top: 7px;
 }
-.single-courses-card .content .list-info .button a {
-  color: var(--blackColor);
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--fontFamily);
-}
+
 .single-courses-card .content .list-info .button a i {
   top: 3px;
   margin-left: 6px;
@@ -3673,11 +3762,11 @@ img.header-logo {
 }
 
 .newsletter-info {
-    padding: 50px 40px;
-    border-radius: 10px;
-    background: #33308a;
-    margin-bottom: 54px;
-    margin-top: 30px;
+  padding: 38px 40px;
+  border-radius: 10px;
+  background: #33308a;
+  margin-bottom: 54px;
+  margin-top: 30px;
 }
 .newsletter-info .shape8 {
   top: 26px;
@@ -3699,17 +3788,17 @@ img.header-logo {
   margin-bottom: 0;
   line-height: 1.5;
   color: var(--whiteColor);
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 33px;
+  font-weight: 600;
   font-family: var(--fontFamily);
 }
 
 .newsletter-form form .form-group .form-control {
   border: 0;
-  height: 80px;
+  height: 72px;
   box-shadow: unset;
-  border-radius: 4px;
-  padding-left: 30px;
+  border-radius: 8px;
+  padding-left: 15px;
   background-color: var(--whiteColor);
 }
 .newsletter-form form .form-group button {
@@ -3957,10 +4046,10 @@ Testimonials Area CSS
   left: 303px;
   bottom: 0;
   margin: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 20px;
-  line-height: 60px;
+  width: 41px;
+  height: 39px;
+  font-size: 18px;
+  line-height: 40px;
   margin-right: 20px;
   text-align: center;
   border-radius: 4px;
@@ -3984,7 +4073,7 @@ Testimonials Area CSS
   margin-left: 0;
 }
 .testimonial-content.style-3 .testimonial-slider-info .owl-nav .owl-prev, .testimonial-content.style-3 .testimonial-slider-info .owl-nav .owl-next {
-  left: 276px;
+  left: 431px;;
 }
 .testimonial-content.style-3 .testimonial-slider-info .owl-nav .owl-next {
   right: 90px;
@@ -6445,7 +6534,7 @@ Footer Area CSS
   margin-bottom: 40px;
   color: #33308a;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--fontFamily);
 }
 .single-footer-widget.logo-info .logo {
@@ -6454,8 +6543,8 @@ Footer Area CSS
 .single-footer-widget.logo-info p {
   opacity: 0.7;
   color: #101010;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
 }
 .single-footer-widget.logo-info .email {
   color: #b2cd34;
@@ -6714,9 +6803,9 @@ Copyright Area CSS
   text-align: justify;
 }
 .img-teams-xx{
-    border-radius: 65%;
-    width: 42%;
-    height: 218px;
+  border-radius: 65%;
+  width: 35%;
+  height: 218px;
 }
 .single-team-card-1.text-center {
   margin-bottom: 45px;
@@ -6731,10 +6820,10 @@ Copyright Area CSS
     margin-bottom: 57px;
 }
 .img-fluid-team-2{
-    height: 210px;
+    height: 182px;
 }
 .img-fluid-team-1{
-    height: 233px;;
+    height: 207px;
 }
 /* Video full cover */
 .video-bg {
@@ -6756,7 +6845,8 @@ Copyright Area CSS
 }
 
 p.team-position {
-  margin: 0px 0px 4px;
+  margin: 0px 0px 10px;
+  font-weight: 700;
 }
 h3.head-12 {
     font-size: 25px;
@@ -6890,8 +6980,15 @@ Go Top CSS
   .about-img .img_1{
     display: none;
   }
-  .exp-custom , .sec-title-about-course h2{
+  .exp-custom {
     font-size: 22px;
+  }
+  .sec-title-about-course h2{
+    font-size: 18px;
+  }
+ 
+  .sec-title-about-course span.title{
+    font-size: 21px;
   }
   .container.pading-top-100 {
     padding: 20px 15px 10px;
@@ -6910,6 +7007,9 @@ Go Top CSS
   .target-block-1 {
     height: 155px;
   }
+  .container.pading-top-1001 {
+    padding: 30px 10px;
+  }
   .counter-icon .icon-img {
     width: 55px;
     padding-top: 10px;
@@ -6920,6 +7020,9 @@ Go Top CSS
   .thead-client {
     font-size: 23px;
   }
+  .about-image .experience-info{
+    width: auto;
+  }
 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -6929,4 +7032,5 @@ Go Top CSS
   .testimonial-content .testimonial-slider-info .owl-nav .owl-prev, .testimonial-content .testimonial-slider-info .owl-nav .owl-next {
     bottom: -65px !important;
   }
+ 
 }

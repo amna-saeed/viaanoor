@@ -36,12 +36,68 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'send.one.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
-            'timeout' => null,
+            'timeout' => env('MAIL_TIMEOUT', 60),
+            'auth_mode' => null,
+        ],
+
+        // One.com: for email clients use send.one.com (587 recommended). mailout.one.com only works when site is on One.com.
+        'onecom_send_587' => [
+            'transport' => 'smtp',
+            'host' => 'send.one.com',
+            'port' => 587,
+            'encryption' => 'tls',
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 60,
+            'auth_mode' => null,
+        ],
+
+        'onecom_send_465' => [
+            'transport' => 'smtp',
+            'host' => 'send.one.com',
+            'port' => 465,
+            'encryption' => 'ssl',
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 60,
+            'auth_mode' => null,
+        ],
+
+        'onecom_send_25' => [
+            'transport' => 'smtp',
+            'host' => 'send.one.com',
+            'port' => 25,
+            'encryption' => null,
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 60,
+            'auth_mode' => null,
+        ],
+
+        'onecom_mailout_587' => [
+            'transport' => 'smtp',
+            'host' => 'mailout.one.com',
+            'port' => 587,
+            'encryption' => 'tls',
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 60,
+            'auth_mode' => null,
+        ],
+
+        'onecom_mailout_465' => [
+            'transport' => 'smtp',
+            'host' => 'mailout.one.com',
+            'port' => 465,
+            'encryption' => 'ssl',
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'timeout' => 60,
             'auth_mode' => null,
         ],
 
@@ -95,6 +151,12 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
+
+    'application_to' => env('MAIL_APPLICATION_TO', 'admin@viaanur.com'),
+    'contact_to' => env('MAIL_CONTACT_TO', 'admin@viaanur.com'),
+
+    // Optional: BCC copy to your Gmail when admin@ bounces (e.g. One.com relay issue)
+    'application_bcc' => env('MAIL_APPLICATION_BCC', null),
 
     /*
     |--------------------------------------------------------------------------

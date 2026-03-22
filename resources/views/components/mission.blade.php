@@ -37,7 +37,7 @@
               <div class="target-block text-white custom-padding">
                 <div class="border-line icons-bx"></div>
                 <i class="bi bi-eye icons-bx"></i>
-                <h4 class="fw-bold head-11">Vision</h4>
+                <h4 class="fw-bold head-11">Award</h4>
                 <p class="ethics-cutom read-more-text">
                  ViAaNur Tutoring is proudly recognised for exemplary personalised teaching, exceptional student mastery and achievement, and its meaningful contribution to developing empowered, confident future leaders equipped to thrive in an evolving world.
                 </p>

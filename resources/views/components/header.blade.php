@@ -39,28 +39,27 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
                                 Home
                             </a>
                         </li>
-                        
                         <li class="nav-item">
-                            <a href="{{ route('courses') }}" class="nav-link">
+                            <a href="{{ route('courses') }}" class="nav-link {{ request()->routeIs('courses') ? 'active' : '' }}">
                                 Courses
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('teams') }}" class="nav-link">
+                            <a href="{{ route('teams') }}" class="nav-link {{ request()->routeIs('teams') ? 'active' : '' }}">
                                 Our Team
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('about-us') }}" class="nav-link">
+                            <a href="{{ route('about-us') }}" class="nav-link {{ request()->routeIs('about-us') ? 'active' : '' }}">
                                 About Us
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('contact-us') }}" class="nav-link">
+                            <a href="{{ route('contact-us') }}" class="nav-link {{ request()->routeIs('contact-us') ? 'active' : '' }}">
                                 Contact Us
                             </a>
                         </li>
@@ -68,24 +67,24 @@
                     <div class="others-option position-relative d-flex align-items-center gap-2">
                         @auth
                             <div class="option-item">
-                                <a href="{{ route('student.dashboard') }}" class="default-btn2">
+                                <a href="{{ route('student.dashboard') }}" class="header-nav-btn">
                                     <i class="bi bi-grid-1x2 me-1"></i> Dashboard
                                 </a>
                             </div>
                             @if(auth()->user()->isAdmin())
                                 <div class="option-item">
-                                    <a href="{{ route('admin.dashboard') }}" class="btn btn-outline-light btn-sm">Admin</a>
+                                    <a href="{{ route('admin.dashboard') }}" class="header-nav-btn header-nav-btn-outline">Admin</a>
                                 </div>
                             @endif
                             <div class="option-item">
                                 <form action="{{ route('logout') }}" method="POST" class="d-inline">
                                     @csrf
-                                    <button type="submit" class="btn btn-outline-light btn-sm">Sign out</button>
+                                    <button type="submit" class="header-nav-btn header-nav-btn-outline">Sign out</button>
                                 </form>
                             </div>
                         @else
                             <div class="option-item">
-                                <a href="{{ route('login') }}" class="default-btn2 mini"> <i class="bi bi-person-fill ml-2"></i>Sign in</a>
+                                <a href="{{ route('login') }}" class="header-nav-btn"> <i class="bi bi-person-fill ml-2"></i>Sign in</a>
                             </div>
                         @endauth
                     </div>
@@ -109,15 +108,17 @@
                     <div class="others-options justify-content-center d-flex align-items-center gap-2 flex-wrap">
                         @auth
                             <div class="option-item">
-                                <a href="{{ route('student.dashboard') }}" class="default-btn2">Dashboard</a>
+                                <a href="{{ route('student.dashboard') }}" class="header-nav-btn">Dashboard</a>
                             </div>
                             <div class="option-item">
                                 <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                                    @csrf<button type="submit" class="btn btn-outline-light btn-sm">Sign out</button></form>
+                                    @csrf
+                                    <button type="submit" class="header-nav-btn header-nav-btn-outline">Sign out</button>
+                                </form>
                             </div>
                         @else
                             <div class="option-item">
-                                <a href="{{ route('login') }}" class="default-btn2">Sign in <i class="bi bi-person-fill ml-2"></i></a>
+                                <a href="{{ route('login') }}" class="header-nav-btn">Sign in <i class="bi bi-person-fill ml-2"></i></a>
                             </div>
                         @endauth
                     </div>
@@ -129,31 +130,57 @@
 <!-- End Navbar Area -->
 
 <style>
+/* Active nav link - green color + underline */
+.navbar-nav .nav-link.active {
+    color: #322f89 !important;
+    font-weight: 600;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--mainColor, #b2cd34) !important;
+}
+
 .loader-logo{
     width: 290px;
 }
-button.btn.btn-outline-light.btn-sm{
-    background: red;
-    padding: 8px;
-}
-a.btn.btn-outline-light.btn-sm {
-    background: #322f89;
-    padding: 9px 14px;
-    border-radius: 5px;
-}
-.default-btn2 {
+
+/* Header-only auth buttons – unique class, baaki site ke buttons par apply nahi hoga */
+.header-nav-btn {
     z-index: 1;
     position: relative;
-    padding: 8px 13px;
+    padding: 8px 15px;
     border-radius: 6px;
     display: inline-block;
     color: #fff;
     background: #322f89;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     font-family: var(--fontFamily);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    border: none;
+    border: 2px solid #322f89;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+}
+.header-nav-btn:hover {
+    color: #fff;
+    background: #2a276e;
+    border-color: #2a276e;
+}
+.header-nav-btn-outline {
+    background: transparent;
+    color: #322f89;
+    border: 2px solid #322f89;
+}
+.header-nav-btn-outline:hover {
+    background: #322f89;
+    color: #fff;
+}
+form .header-nav-btn-outline {
+    font-size: 14px;
+    padding: 6px 14px;
 }
 </style>

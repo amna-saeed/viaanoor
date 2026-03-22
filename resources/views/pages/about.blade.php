@@ -13,23 +13,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <h1 class="fw-bold about-title aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">10+</h1>
-                    <h5 class="fw-bold exp-custom text-uppercase">YEARS OF EXPERIANCE</h5>
+                    <h5 class="fw-bold exp-custom text-uppercase">10+ years of experience</h5>
                     <p class="p-17">
-                        ViAaNur is a leading institution dedicated to providing high-quality education and skill development. Our mission is to empower students with the knowledge, confidence, and creativity they need to excel academically and professionally.
+                        At ViAaNur Tutoring, we believe that every learner carries unique potential waiting to be cultivated. Our approach combines personalised, high-quality instruction with structured academic strategy to ensure each student achieves measurable mastery and lasting confidence.
                     </p>
                     <p class="p-17">
-                      We believe education goes beyond memorizing facts — it’s about building a strong foundation for lifelong success. By combining expert instructors, modern teaching methods, and a supportive learning environment, we ensure every learner has the tools to reach their full potential.
+                        We are a team of highly skilled and dedicated tutors committed to delivering tailored learning experiences that align with each student’s strengths, goals, and pace. Through precision teaching, ongoing assessment, and supportive mentorship, we create an environment where students feel both challenged and empowered.
                     </p>
                     <p class="p-17">
-                       Our commitment is to make learning accessible, engaging, and effective for everyone, from beginners to advanced learners. At Study Academy, we inspire curiosity, foster creativity, and nurture a passion for continuous growth.
+                        Our work extends beyond improving grades. We nurture resilience, independent thinking, and leadership qualities—equipping students with the clarity, discipline, and confidence needed to thrive in an evolving world. Grounded in our commitment to Empowered Minds, Proven Results, Exceptional Futures, we partner with families to transform potential into performance and aspiration into achievement.
+                    </p>
+                    <p class="p-17">
+                        At ViAaNur Tutoring, excellence is not a destination—it is a journey of growth, mastery, and purpose.
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0">
                     <div class="about-img">
                         <div class="img_1 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="550">
                             <div class="border-line"></div>
-                            <img src="{{asset('assets/images/banner/event-1.webp')}}" class="img-fluid" alt="About" />
+                            <img src="{{asset('assets/images/banner/OnlineClass.webp')}}" class="img-fluid" alt="About" />
                            
                         </div>
                     </div>
@@ -39,27 +41,31 @@
     </section>
 
     <!-- courses -->
-    <div class="container pading-top-100">
+    <div class="container pading-top-1001">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="sec-title-about-course">
-                    <span class="title">Online Courses</span>
-                    <h2>Learn a new skills online on your time</h2>
+                    <span class="title">Online Learning Excellence</span>
+                    <h2>Flexible Learning. Proven Progress.</h2>
                 </div>
                 <p class="p-17">
-                   Discover the freedom to grow your skills on your schedule. Whether you’re looking to accelerate your career, pursue a passion, or launch a new venture, our expertly designed online courses empower you to learn efficiently, anytime and anywhere.
+                   Experience the freedom to advance your knowledge through expertly designed online programmes tailored to support meaningful growth. Whether you are strengthening academic foundations, pursuing advanced mastery, or expanding your skill set, our online learning pathways provide structured, high-quality education—accessible wherever and whenever you choose.
                 </p>
                 <p class="p-17">
                     <ul class="custom-bullets">
-                        <li>Access courses 24/7 on your computer, tablet, or smartphone. Learn whenever it fits your schedule.</li>
-                        <li>Gain knowledge from industry professionals with years of experience.</li>
-                        <li>Focus on skills that matter—coding, design, marketing, languages, and more.</li>
-                        <li>Participate in quizzes, projects, and discussion forums to reinforce learning.</li>
-                        <li>Track your progress and earn certificates to showcase your achievements.</li>
+                        <li>Access course materials 24/7 across desktop, tablet, or mobile devices, allowing learning to fit seamlessly into your schedule.</li>
+                        <li>Benefit from guidance developed by experienced educators committed to academic excellence</li>
+                        <li>Focus on high-impact subject areas designed to build confidence, competence, and measurable results.</li>
+                        <li>Engage with interactive assessments, structured activities, and applied learning tasks that reinforce mastery.</li>
+                        <li>Monitor your progress through clear benchmarks and earn recognised certificates that reflect your achievement.</li>
                     </ul>  
+
+                    <p class="p-17">
+                        At ViAaNur Tutoring, online learning is not simply convenient—it is purposeful, structured, and designed to transform potential into performance.
+                    </p>
                 </p>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
                 <div class="counter-box">
                     <div class="row">
                         <div class="col-lg-6">
@@ -70,7 +76,6 @@
                                         <img src="{{ asset('assets/images/banner/classroom.png') }}" alt="Classroom" class="icon-img">
                                     </div>
                                     <h5 class="counter-text mb-0">Teachers</h5>
-                                    <!-- Number -->
                                     <div class="counter-number">300</div>
                                 </div>
                             </div>
@@ -81,7 +86,6 @@
                                         <img src="{{ asset('assets/images/banner/mentorship.png') }}" alt="Classroom" class="icon-img">
                                     </div>
                                     <h5 class="counter-text mb-0">Career</h5>
-                                    <!-- Number -->
                                     <div class="counter-number">11,900</div>
                                 </div>
                             </div>
@@ -94,7 +98,6 @@
                                         <img src="{{ asset('assets/images/banner/class.png') }}" alt="Classroom" class="icon-img">
                                     </div>
                                     <h5 class="counter-text mb-0">Classroom</h5>
-                                    <!-- Number -->
                                     <div class="counter-number">1,700</div>
                                 </div>
                             </div>
@@ -105,14 +108,13 @@
                                         <img src="{{ asset('assets/images/banner/deadline.png') }}" alt="Classroom" class="icon-img">
                                     </div>
                                     <h5 class="counter-text mb-0">Activities</h5>
-                                    <!-- Number -->
                                     <div class="counter-number">157</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!----- end ----->

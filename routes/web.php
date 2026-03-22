@@ -7,6 +7,8 @@ use App\Http\Controllers\Student\StudentDashboardController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminStudentController;
 use App\Http\Controllers\Admin\AdminCourseController;
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,12 @@ use App\Http\Controllers\Admin\AdminCourseController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/application', [ApplicationController::class, 'store'])->name('application.store');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/teams', [HomeController::class, 'Team'])->name('teams');
 Route::get('/courses', [HomeController::class, 'Courses'])->name('courses');
 Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
+Route::post('/contact-us', [ContactController::class, 'store'])->name('contact.store');
 
 // Auth
 Route::middleware('guest')->group(function () {

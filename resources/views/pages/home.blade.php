@@ -36,20 +36,20 @@
                             <h3>Study smart, aim high.</h3>
                             <h4>Turn your dreams into achievements.</h4>
                         </div>
-                        <div class="mentor-info d-flex align-items-center justify-content-between p-3 shadow-sm rounded bg-light">
-                            <div class="content">
-                                <h3 class="mb-1 text-whatsapp font-weight-bold">
-                                    Chat Instantly on WhatsApp
-                                </h3>
-                                <span class="text-muted">
-                                    Connect with your mentor anytime, anywhere
-                                </span>
-                            </div>
-                            <div class="icon ml-3">
-                                <img src="assets/images/banner/whatsapp.svg" alt="user-image" class="whatz-icon" />
-                            </div>
-                        </div>
-
+                        <div class="button blick-100 mentor-info d-flex align-items-center justify-content-between p-3 shadow-sm rounded bg-light">
+                            <a class="bliink-inner same-wraps" href="https://api.whatsapp.com/send?phone=447507719318&text=Hello%20there!" target="_blank">
+                                <div class="content">
+                                    <h3 class="mb-1 text-whatsapp font-weight-bold">
+                                        Chat Instantly on WhatsApp
+                                    </h3>
+                                    <span class="text-muted">
+                                        Connect with your mentor anytime, anywhere
+                                    </span>
+                                </div>
+                                <div class="icon ml-3">
+                                    <img src="assets/images/banner/whatsapp.svg" alt="user-image" class="whatz-icon" />
+                                </div>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -68,14 +68,26 @@
             <img src="assets/images/banner/banner-shape8.webp" alt="shape">
         </div>
     </div>
+</div>
     <!-- End Banner Area -->
+       <!-- Start Video Area -->
+       <div class="container">
+        <div class="video-area video-gradient-wrap">
+            <video class="video-bg" autoplay muted loop playsinline>
+                <source src="{{ asset('assets/images/banner/newvideo.mp4') }}" type="video/mp4">
+            </video>
+            <div class="video-gradient-overlay"></div>
+        </div>
+    </div>
+    
+    @include('components.academic-lead ')
 
     <!-- Start Categories Area -->
     <div class="categories-area pt-136 pb-110">
         <div class="container">
             <div class="categories-section-title" data-cue="slideInUp">
                 <div class="row align-items-end">
-                    <div class="col-lg-6 col-md-7">
+                    <div class="col-lg-12 col-md-7 text-center">
                         <div class="section-title">
                             <span class="d-inline-block sub-title">Course Category</span>
                             <h2>
@@ -84,14 +96,6 @@
                                     Categories
                                 </span>
                             </h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-5">
-                        <div class="text-end">
-                            <a href="courses-details.html" class="default-btn2"> 
-                                View All Categories
-                                 <i class="bi bi-arrow-right ml-2"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -193,7 +197,7 @@
         </div>
     </div>
     <!-- End Categories Area -->
-
+    @include('components.apply-form')
       <!-- Start Courses Area -->
     <div class="courses-area pt-136 pb-110">
         <div class="container">
@@ -207,13 +211,58 @@
                 </h2>
             </div>
             <div class="row" data-cues="fadeIn">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-courses-card">
+                        <div class="image position-relative">
+                            <a href="courses-details.html">
+                                <img src="{{asset('assets/images/banner/wi.webp')}}" alt="courses-image" class="img-cource">
+                            </a>
+                            <span class="price">£35/ hour</span>
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <a href="courses-details.html">GCSE Level Mathematics</a>
+                            </h3>
+                              <div class="user-info d-flex align-items-center">
+                                <div class="image me-2">
+                                     <img src="{{asset('assets/images/banner/WhatsApp Image 2026-02-11 at 2.50.39 PM.jpeg')}}" alt="courses-image">
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 d-flex align-items-center">
+                                        Ms.R.Quraishi
+                                        <span class="ms-12 rating-stars">
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph-fill ph-star"></i>
+                                            <i class="ph-fill ph-star-half"></i>
+
+                                        </span>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="list-info d-flex align-items-center justify-content-between">
+                                <div class="title d-flex align-items-center">
+                                    <div class="icon">
+                                        <img src="{{asset('assets/images/banner/user-icon2.png')}}" class="users-course" alt="icon">
+                                    </div>
+                                    <span>50+ students</span>
+                                </div>
+                                <div class="button blick-100 enroll-apply-btn js-apply-form-open">
+                                    <a class="bliink-inner1" href="javascript:void(0)">ENROLL NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-card">
                         <div class="image position-relative">
                             <a href="courses-details.html">
                                 <img src="{{asset('assets/images/banner/socialmedia (1).webp')}}" alt="courses-image" class="img-cource">
                             </a>
-                            <span class="price">$27.00</span>
+                            <span class="price">£30/ hour</span>
                         </div>
                         <div class="content">
                             <h3>
@@ -228,7 +277,7 @@
                                 </div>
                                 <div>
                                     <h6 class="mb-1 d-flex align-items-center">
-                                        Prof. Aftab Anwar
+                                        Mr.A.Anwar
                                         <span class="ms-12 rating-stars">
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
@@ -244,29 +293,27 @@
                                     <div class="icon">
                                         <img src="{{asset('assets/images/banner/user-icon2.png')}}" class="users-course" alt="icon">
                                     </div>
-                                    <span>70+ students</span>
+                                    <span>50+ students</span>
                                 </div>
-                                <div class="button">
-                                    <a href="courses-details.html">
-                                        ENROLL NOW
-                                         <i class="bi bi-arrow-right ml-2"></i>
-                                    </a>
+                                <div class="button blick-100 enroll-apply-btn js-apply-form-open">
+                                    <a class="bliink-inner1" href="javascript:void(0)">ENROLL NOW</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="single-courses-card">
                         <div class="image position-relative">
                             <a href="courses-details.html">
                                 <img src="assets/images/banner/quran (1).webp" alt="courses-image" class="img-cource">
                             </a>
-                            <span class="price">$27.00</span>
+                            <span class="price">£20/ hour</span>
                         </div>
                         <div class="content">
                             <h3>
-                                <a href="courses-details.html">Introduction to Qur’an Reading & Memorisation</a>
+                                <a href="courses-details.html">Islamic Studies</a>
                             </h3>
                             <div class="user-info d-flex align-items-center">
                                 <div class="image me-2">
@@ -274,7 +321,7 @@
                                 </div>
                                 <div>
                                     <h6 class="mb-1 d-flex align-items-center">
-                                        Prof. Amina Begum
+                                        Ms.A.Begum
                                         <span class="ms-12 rating-stars">
                                             <i class="ph-fill ph-star"></i>
                                             <i class="ph-fill ph-star"></i>
@@ -291,59 +338,10 @@
                                     <div class="icon">
                                         <img src="{{asset('assets/images/banner/user-icon2.png')}}" class="users-course" alt="icon">
                                     </div>
-                                    <span>70+ students</span>
+                                    <span>50+ students</span>
                                 </div>
-                                <div class="button">
-                                    <a href="courses-details.html">
-                                        ENROLL NOW
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="col-lg-4 col-md-6">
-                    <div class="single-courses-card">
-                        <div class="image position-relative">
-                            <a href="courses-details.html">
-                                <img src="{{asset('assets/images/banner/wi.webp')}}" alt="courses-image" class="img-cource">
-                            </a>
-                            <span class="price">$27.00</span>
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <a href="courses-details.html">Introduction to Mathematics</a>
-                            </h3>
-                              <div class="user-info d-flex align-items-center">
-                                <div class="image me-2">
-                                     <img src="{{asset('assets/images/banner/WhatsApp Image 2026-02-11 at 3.38.52 PM.jpeg')}}" alt="courses-image">
-                                </div>
-                                <div>
-                                    <h6 class="mb-1 d-flex align-items-center">
-                                        Prof. Hani Hassan
-                                        <span class="ms-12 rating-stars">
-                                            <i class="ph-fill ph-star"></i>
-                                            <i class="ph-fill ph-star"></i>
-                                            <i class="ph-fill ph-star"></i>
-                                            <i class="ph-fill ph-star-half"></i>
-
-                                        </span>
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="list-info d-flex align-items-center justify-content-between">
-                                <div class="title d-flex align-items-center">
-                                    <div class="icon">
-                                        <img src="{{asset('assets/images/banner/user-icon2.png')}}" class="users-course" alt="icon">
-                                    </div>
-                                    <span>70+ students</span>
-                                </div>
-                                <div class="button">
-                                    <a href="courses-details.html">
-                                        ENROLL NOW
-                                        <i class="bi bi-arrow-right ml-2"></i>
-                                    </a>
+                                <div class="button blick-100 enroll-apply-btn js-apply-form-open">
+                                    <a class="bliink-inner1" href="javascript:void(0)">ENROLL NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -351,26 +349,18 @@
                 </div>
                
             </div>
-            <div class="single-courses-button text-center" data-cue="slideInUp">
+            <!-- <div class="single-courses-button text-center" data-cue="slideInUp">
                 <a href="courses-details.html" class="default-btn2"> 
                     View All Courses
                      <i class="bi bi-arrow-right ml-2"></i>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- End Courses Area -->
 
-     <!-- Start Video Area -->
-     <div class="container">
-        <div class="video-area video-gradient-wrap">
-            <video class="video-bg" autoplay muted loop playsinline>
-                <source src="{{ asset('assets/images/banner/Websitevideo.mp4') }}" type="video/mp4">
-            </video>
-            <div class="video-gradient-overlay"></div>
-        </div>
-    </div>
-    
+   
+
      <div class="testimonial-area ptb-10">
             <div class="container">
                 <div class="row align-items-center">
@@ -439,9 +429,11 @@
     <!-- End About Area -->
 
    
+    <!-- ownere -->
+      @include('components.mission')
+     <!--  -->
 
     <!-- Start Choose Area -->
-    @include('components.mission')
     <!-- End Choose Area -->
 
     <!-- Start Team Area -->
@@ -455,7 +447,7 @@
                             <h2>
                                 Our Expert
                                 <span class="position-relative">
-                                    Lecturer
+                                    Lecturers
                                 </span>
                             </h2>
                         </div>
@@ -503,7 +495,7 @@
                             <h3>
                                Amina Begum
                             </h3>
-                            <p>Islamic Studies Lead Tutor & Teaching Assistant</p>
+                            <p>Islamic Studies Lead Tutor</p>
                             <a href="{{ route('teams') }}" class="default-btn2 style-3">View More</a>
                         </div>
                     </div>

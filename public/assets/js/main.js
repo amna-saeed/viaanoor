@@ -151,8 +151,10 @@
 	// Preloader
 	$(window).on('load', function() {
 		$('.preloader-area').addClass('deactivate');
-
 	});
+	setTimeout(function() {
+		$('.preloader-area').addClass('deactivate');
+	}, 4000);
 
 	// Price Filter JS
 
