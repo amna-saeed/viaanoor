@@ -23,7 +23,7 @@ Jab site **One.com hosting** par chalegi, wahan se **mailout.one.com** use kar s
    MAIL_PORT=587
    MAIL_ENCRYPTION=tls
    MAIL_USERNAME=admin@viaanur.com
-   MAIL_PASSWORD="Aaminah-Nur30"
+   MAIL_PASSWORD="your_one_com_mailbox_password"
    MAIL_FROM_ADDRESS=admin@viaanur.com
    MAIL_FROM_NAME="ViAaNur Tutoring"
    MAIL_APPLICATION_TO=admin@viaanur.com
