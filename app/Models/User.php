@@ -26,6 +26,22 @@ class User extends Authenticatable
 
     public const ROLE_STUDENT = 'student';
     public const ROLE_ADMIN = 'admin';
+    public const ROLE_TEACHER = 'teacher';
+
+    public function lmsEnrollments()
+    {
+        return $this->hasMany(LmsEnrollment::class, 'user_id');
+    }
+
+    public function taughtLmsClasses()
+    {
+        return $this->hasMany(LmsClass::class, 'teacher_id');
+    }
+
+    public static function adminExists(): bool
+    {
+        return static::where('role', self::ROLE_ADMIN)->exists();
+    }
 
     public function isAdmin(): bool
     {
@@ -35,6 +51,49 @@ class User extends Authenticatable
     public function isStudent(): bool
     {
         return $this->role === self::ROLE_STUDENT;
+    }
+
+    public function isTeacher(): bool
+    {
+        return $this->role === self::ROLE_TEACHER;
+    }
+
+    public static function emailIsConfiguredAdmin(?string $email): bool
+    {
+        if ($email === null || $email === '') {
+            return false;
+        }
+        $allowed = config('viaanoor.admin_emails', []);
+        return in_array(strtolower(trim($email)), $allowed, true);
+    }
+
+    /**
+     * Promote user to admin if their email is in ADMIN_EMAILS (.env).
+     */
+    public function promoteIfConfiguredAdminEmail(): bool
+    {
+        if ($this->isAdmin()) {
+            return false;
+        }
+        if (! self::emailIsConfiguredAdmin($this->email)) {
+            return false;
+        }
+        $this->update(['role' => self::ROLE_ADMIN]);
+        $this->refresh();
+        return true;
+    }
+
+    public function ensureAdminWhenAdminOnlyMode(): bool
+    {
+        if (! config('viaanoor.admin_only_mode')) {
+            return false;
+        }
+        if ($this->isAdmin()) {
+            return false;
+        }
+        $this->update(['role' => self::ROLE_ADMIN]);
+        $this->refresh();
+        return true;
     }
 
     /**

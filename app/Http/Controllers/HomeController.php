@@ -26,5 +26,13 @@ class HomeController extends Controller
     {
         return view('pages.contact-us');
     }
+    public function termsCondition()
+    {
+        return view('pages.terms');
+    }
+    public function Privacy()
+    {
+        return view('pages.privacy-policy');
+    }
    
 }

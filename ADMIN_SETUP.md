@@ -1,8 +1,29 @@
 # Admin & Student Dashboard – URLs & Setup
 
+## Fast fix: always open admin for your email (recommended)
+
+1. Open your project **`.env`** file.
+2. Add your **exact login email** (the one you use at `/login`):
+
+   ```env
+   ADMIN_EMAILS=your-email@example.com
+   ```
+
+   For more than one owner, use commas: `ADMIN_EMAILS=a@x.com,b@y.com`
+
+3. Save the file, then run:
+
+   ```bash
+   php artisan config:clear
+   ```
+
+4. Refresh the site or log in again. You will get the **admin** role and be sent to **http://viaanoor.test/admin** (or refresh `/student/dashboard` once — it will redirect to admin).
+
+---
+
 ## Why do I only see the student dashboard?
 
-If you only see **http://viaanoor.test/student/dashboard** after login, your user has the **student** role. The **admin site** is only visible to users with the **admin** role. Make your user an admin (see below), then log in again.
+Your account had the **student** role in the database. **Display name "admin" is not the same as admin role.** Use **ADMIN_EMAILS** above, or the Tinker steps below.
 
 ---
 

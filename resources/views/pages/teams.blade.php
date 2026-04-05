@@ -23,12 +23,12 @@
                             </h3>
                             <p class="team-position">Founder & Lead Practitioner</p>
                            <p class="team-description-12">
-R. Quraishi is the Founder and Academic Lead of ViAaNur Tutoring, bringing over 10 years of teaching experience and Qualified Teacher Status (QTS) to the organisation. With a specialist background in Secondary Mathematics, she possesses deep subject expertise and a comprehensive understanding of curriculum progression, assessment frameworks, and examination standards.<br /><br />
+Ruheena is the Founder and Academic Lead of ViAaNur Tutoring, bringing over 10 years of teaching experience and Qualified Teacher Status (QTS) to the organisation. With a specialist background in Secondary Mathematics, she possesses deep subject expertise and a comprehensive understanding of curriculum progression, assessment frameworks, and examination standards.<br /><br />
 Her career later transitioned into Primary education, where she spent eight years teaching across all year groups and serving as Maths Lead for approximately five years. In this leadership capacity, she drove whole-school improvement, embedded mastery-based pedagogy, and secured measurable gains in pupil attainment and confidence.<br /><br />
-R. Quraishi has consistently transformed the outcomes of private tuition students, supporting learners to significantly improve their grades, close longstanding gaps, and surpass expectations through structured, diagnostic, and highly personalised teaching.<br /><br />
+Ruheena has consistently transformed the outcomes of private tuition students, supporting learners to significantly improve their grades, close longstanding gaps, and surpass expectations through structured, diagnostic, and highly personalised teaching.<br /><br />
 She has completed the National Professional Qualification in Leading Teacher Development (NPQLTD), strengthening her expertise in instructional coaching, curriculum design, and evidence-informed practice. As Academic Lead, she is responsible for designing ViAaNur’s curriculum frameworks, quality-assuring teaching standards, and training and mentoring all tutors, ensuring that every learner receives provision of the highest calibre.<br /><br />
 As an all-through practitioner, she works confidently with pupils from early primary through to GCSE level, supporting struggling learners, secure mathematicians, and high-achieving students seeking depth and distinction. Her approach combines academic rigour, clarity of instruction, and high expectations with warmth and encouragement.<br /><br />
-Beyond her professional role, Ms Quraishi is a new mum, bringing empathy, patience, and perspective to her work in nurturing confident, capable, and resilient learners.
+Beyond her professional role, Ms Ruheena is a new mum, bringing empathy, patience, and perspective to her work in nurturing confident, capable, and resilient learners.
 </p>
                             <button class="team-readmore-btn">Read More</button>
                         </div>
@@ -42,14 +42,14 @@ Beyond her professional role, Ms Quraishi is a new mum, bringing empathy, patien
                         </div>
                         <div class="content">
                             <h3 class="head-12">
-                                Mr.Aftab Anwar
+                                Mr.Aftab Anwar 
                             </h3>
                             <p class="team-position">Managing Director & Social Media Studies Trainer</p>
                           <p class="team-description-12">
-Mr. Aftab Anwar serves as the Managing Director of ViAaNur Tutoring, where he provides strategic leadership and oversees the day-to-day operations of the organisation. In his role as Managing Director, he is responsible for ensuring the smooth running of services, maintaining high professional standards, and driving the long-term vision and growth of ViAaNur Tutoring.<br /><br />
-Born in Saudi Arabia and raised between Pakistan and Saudi Arabia, Mr. Anwar brings a strong international perspective to his work. He is a well-established social media personality across these regions, with a multi-million following across multiple platforms. His success in the digital space is underpinned by a deep understanding of content creation, audience engagement, and brand development.<br /><br />
-Passionate about empowering others, Mr. Anwar is committed to passing on his expertise to the next generation of content creators. He has trained and mentored numerous individuals, many of whom have gone on to become highly recognised personalities within the social media industry.<br /><br />
-Through his leadership and training, Mr. Anwar supports ViAaNur Tutoring’s mission to deliver an elite education experience, combining professional excellence with real-world, future-focused skills.
+Aftab serves as the Managing Director of ViAaNur Tutoring, where he provides strategic leadership and oversees the day-to-day operations of the organisation. In his role as Managing Director, he is responsible for ensuring the smooth running of services, maintaining high professional standards, and driving the long-term vision and growth of ViAaNur Tutoring.<br /><br />
+Born in Saudi Arabia and raised between Pakistan and Saudi Arabia, Aftab brings a strong international perspective to his work. He is a well-established social media personality across these regions, with a multi-million following across multiple platforms. His success in the digital space is underpinned by a deep understanding of content creation, audience engagement, and brand development.<br /><br />
+Passionate about empowering others, Aftab is committed to passing on his expertise to the next generation of content creators. He has trained and mentored numerous individuals, many of whom have gone on to become highly recognised personalities within the social media industry.<br /><br />
+Through his leadership and training,Aftab supports ViAaNur Tutoring’s mission to deliver an elite education experience, combining professional excellence with real-world, future-focused skills.
 </p>
                             <button class="team-readmore-btn">Read More</button>
                         </div>
@@ -59,11 +59,11 @@ Through his leadership and training, Mr. Anwar supports ViAaNur Tutoring’s mis
                 <div class="col-lg-6 col-sm-6">
                     <div class="single-team-card-1 text-center">
                         <div class="image text-center">
-                            <img class="img-teams-xx" src="http://amna.clusterstacks.com/assets/images/banner/WhatsApp Image 2026-02-26 at 8.29.33 PM.jpeg" alt="team-image">
+                            <img class="img-teams-xx" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-26 at 8.29.33 PM.jpeg') }}" alt="team-image">
                         </div>
                         <div class="content">
                             <h3 class="head-12">
-                                Ms.Sabreena Quraishi
+                                Ms.Sabreena Ruheena
                             </h3>
                             <p class="team-position">Early Years Lead & Primary Tutor</p>
 <p class="team-description-12">

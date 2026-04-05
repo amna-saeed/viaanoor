@@ -39,12 +39,12 @@
                     <h3>Legal</h3>
                     <ul class="list-unstyled ps-0 mb-0">
                         <li>
-                            <a href="terms-conditions.html">
+                            <a href="{{ route('terms-conditions') }}">
                                 Terms & Conditions
                             </a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">
+                            <a href="{{ route('privacy-policy') }}">
                                 Privacy Policy
                             </a>
                         </li>

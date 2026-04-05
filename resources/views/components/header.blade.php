@@ -67,13 +67,13 @@
                     <div class="others-option position-relative d-flex align-items-center gap-2">
                         @auth
                             <div class="option-item">
-                                <a href="{{ route('student.dashboard') }}" class="header-nav-btn">
+                                <a href="{{ route(auth()->user()->isAdmin() ? 'admin.dashboard' : 'student.dashboard') }}" class="header-nav-btn">
                                     <i class="bi bi-grid-1x2 me-1"></i> Dashboard
                                 </a>
                             </div>
                             @if(auth()->user()->isAdmin())
                                 <div class="option-item">
-                                    <a href="{{ route('admin.dashboard') }}" class="header-nav-btn header-nav-btn-outline">Admin</a>
+                                    <a href="{{ route('admin.courses.index') }}" class="header-nav-btn header-nav-btn-outline">Courses</a>
                                 </div>
                             @endif
                             <div class="option-item">
@@ -108,7 +108,7 @@
                     <div class="others-options justify-content-center d-flex align-items-center gap-2 flex-wrap">
                         @auth
                             <div class="option-item">
-                                <a href="{{ route('student.dashboard') }}" class="header-nav-btn">Dashboard</a>
+                                <a href="{{ route(auth()->user()->isAdmin() ? 'admin.dashboard' : 'student.dashboard') }}" class="header-nav-btn">Dashboard</a>
                             </div>
                             <div class="option-item">
                                 <form action="{{ route('logout') }}" method="POST" class="d-inline">

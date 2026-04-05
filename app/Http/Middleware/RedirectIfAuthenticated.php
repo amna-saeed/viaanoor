@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
+use App\Support\LmsAuth;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,10 +24,7 @@ class RedirectIfAuthenticated
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
                 $user = Auth::guard($guard)->user();
-                if ($user->isAdmin()) {
-                    return redirect()->route('admin.dashboard');
-                }
-                return redirect()->route('student.dashboard');
+                return redirect()->route(LmsAuth::dashboardRouteName($user));
             }
         }
 

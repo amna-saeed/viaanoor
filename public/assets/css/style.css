@@ -402,6 +402,291 @@ img.footer-logo {
 /*================================================
 Preloader Area CSS
 =================================================*/
+/* default state */
+.accordion-chevron {
+  transition: transform 0.3s ease;
+}
+
+/* jab accordion open ho */
+.accordion-trigger[aria-expanded="true"] .accordion-chevron {
+  transform: rotate(180deg);
+}
+.privacy-accordion-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #f0e9fb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden; /* ensure nothing overflows the circle */
+}
+
+.privacy-accordion-icon svg {
+    width: 100%;      /* fill container */
+    height: 100%;     /* fill container */
+    object-fit: contain; /* scale icon properly */
+    display: block;
+    color:#322f89 !important;
+}
+.privacy-accordion-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.accordion-item .accordion-trigger {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+section.privacy-legal-page{
+    background: #fbfbfb;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+li strong {
+    color: rgb(23, 23, 28);
+}
+span.privacy-accordion-title {
+    color: rgb(23, 23, 28);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+main#main-content {
+    background: #f8f6fb;
+}
+.privacy-legal-page {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    background: hsl(var(--background));
+}
+@media (min-width: 768px) { .privacy-legal-page { padding-bottom: 6rem; } }
+
+.privacy-legal-header {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.privacy-legal-badge {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: hsl(var(--primary));
+    margin-bottom: 0.75rem;
+    text-decoration: underline;
+}
+.privacy-legal-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+.privacy-legal-title .privacy-word { 
+    color:rgb(50 47 137);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+.privacy-legal-title .policy-word {
+    color: #adca37;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+@media (min-width: 640px) { .privacy-legal-title { font-size: 2.75rem; } }
+.privacy-legal-updated {
+    font-size: 0.9375rem;
+    color: hsl(var(--muted-foreground));
+    margin: 0 0 1.25rem;
+}
+.privacy-legal-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+    max-width: 720px;
+}
+
+.privacy-two-col {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+    .privacy-two-col {
+        grid-template-columns: 251px 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}
+
+.privacy-sidebar {
+    position: relative;
+}
+@media (min-width: 1024px) {
+    .privacy-sidebar { position: sticky; top: 6rem; }
+}
+.privacy-sidebar-title {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: hsl(var(--muted-foreground));
+    margin: 0 0 1rem;
+}
+.privacy-nav {
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+}
+.privacy-nav-link {
+    font-size: 0.9375rem;
+    color: hsl(var(--muted-foreground));
+    text-decoration: none;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    margin-left: -0.75rem;
+    border-left: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    font-weight: 500;
+}
+.privacy-nav-link:hover { color: hsl(var(--primary)); }
+.privacy-nav-link.active {
+    color: #322f89;
+    border-left-color: hsl(var(--primary));
+}
+
+.privacy-accordion { border-bottom: none; }
+.privacy-accordion .accordion-item {
+    border: 1px solid hsl(240deg 3.14% 86.83% / 74%);
+    scroll-margin-top: 6rem;
+    border-radius: 12px;
+    margin-bottom: 13px;
+    scroll-margin-top: 6rem;
+}
+.privacy-accordion .accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+}
+@media (min-width: 640px) { .privacy-accordion .accordion-trigger { padding: 17px 17px; } }
+.privacy-accordion-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.privacy-accordion-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #f0e9fb;
+    /* color: hsl(var(--primary-foreground)); */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.privacy-accordion-num {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+.privacy-accordion .accordion-chevron {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    color: hsl(var(--muted-foreground));
+}
+.privacy-accordion .accordion-item.open .accordion-chevron { transform: rotate(180deg); }
+.privacy-accordion .accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease-out;
+}
+.privacy-accordion .accordion-item.open .accordion-content { max-height: 1200px; }
+.privacy-accordion .accordion-content-inner {
+    font-size: 14px;
+    color: rgb(109, 109, 120);
+    line-height: 1.7;
+    padding: 7px 26px;
+    }
+.privacy-accordion .privacy-text { margin: 0 0 0.75rem; }
+.privacy-accordion .privacy-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-family: "DM Sans", sans-serif;
+}
+.privacy-accordion .privacy-list li { margin-bottom: 0.5rem; }
+.privacy-accordion .privacy-list li::marker { color: #6b26d9; }
+
+.privacy-cta-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.5rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    background: hsl(var(--purple-soft));
+    border: 1px solid #e1d4f7;
+}
+@media (min-width: 640px) {
+    .privacy-cta-box {
+        padding: 1.75rem 2rem;
+        gap: 1.5rem;
+    }
+}
+.privacy-cta-icon {
+    color: hsl(var(--primary));
+    flex-shrink: 0;
+}
+.privacy-cta-text { flex: 1; min-width: 180px; }
+.privacy-cta-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+    margin: 0 0 0.25rem;
+}
+.privacy-cta-desc {
+    font-size: 0.9375rem;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+}
+.privacy-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem  0.25rem;
+    border-radius: 0.5rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+.privacy-cta-btn:hover { opacity: 0.95; transform: translateY(-1px); }
+
+@media (max-width: 767px) {
+    .privacy-sidebar { display: none; }
+    .privacy-nav { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+    .privacy-nav-link {
+        margin-left: 0;
+        border-left: none;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.8125rem;
+    }
+    .privacy-nav-link.active { border-bottom: 2px solid hsl(var(--primary)); border-left: none; }
+}
+
+
+
+
 .preloader-area {
   z-index: 9999;
   background-color: var(--whiteColor);
@@ -6819,10 +7104,10 @@ Copyright Area CSS
     margin-top: 37px;
     margin-bottom: 57px;
 }
-.img-fluid-team-2{
-    height: 182px;
+.img-fluid-team-12{
+    height: 181px;
 }
-.img-fluid-team-1{
+.img-fluid-team-11{
     height: 207px;
 }
 /* Video full cover */
@@ -6898,6 +7183,12 @@ h3.head-12 {
 }
 .copyright-list ul li:last-child {
   margin-right: 0;
+}
+.img-fluid-team-11 {
+  height: 207px;
+}
+.img-fluid-team-12 {
+    height: 181px;
 }
 
 /*================================================
@@ -7032,5 +7323,180 @@ Go Top CSS
   .testimonial-content .testimonial-slider-info .owl-nav .owl-prev, .testimonial-content .testimonial-slider-info .owl-nav .owl-next {
     bottom: -65px !important;
   }
+ .privacy-legal-header{
+      margin-top: 0rem;
+ }
+ .privacy-legal-title .privacy-word{
+      font-size: 30px;
+ }
+ .privacy-legal-title .policy-word{
+  font-size: 30px;
+ }
  
 }
+
+/* ========== LMS dashboard (HS- prefixed) ========== */
+.hs-lms-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+.hs-lms-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(30, 41, 59, 0.12);
+}
+.hs-lms-card--stat {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+}
+.hs-lms-card--welcome {
+  padding: 1.25rem 1.5rem;
+}
+.hs-lms-card__icon {
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.hs-lms-card__icon--primary { background: linear-gradient(145deg, #322f89, #5b57b8); }
+.hs-lms-card__icon--teal { background: linear-gradient(145deg, #0d9488, #14b8a6); }
+.hs-lms-card__icon--violet { background: linear-gradient(145deg, #6d28d9, #8b5cf6); }
+.hs-lms-card__icon--amber { background: linear-gradient(145deg, #d97706, #f59e0b); }
+.hs-lms-card__icon--rose { background: linear-gradient(145deg, #be123c, #e11d48); }
+.hs-lms-card__body {
+  flex: 1;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.hs-lms-card__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+.hs-lms-card__value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.hs-lms-card__value--sm {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+.hs-lms-panel {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
+  overflow: hidden;
+}
+.hs-lms-panel__head {
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fafbfc;
+}
+.hs-lms-panel__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+.hs-lms-panel__body {
+  padding: 1rem 1.15rem;
+}
+@media (max-width: 575.98px) {
+  .hs-lms-card__value { font-size: 1.35rem; }
+  .hs-lms-card__icon { flex-basis: 56px; font-size: 1.25rem; }
+}
+
+/* New Admissions donut */
+.hs-lms-panel__subtitle { display: block; margin-top: 0.15rem; }
+.hs-lms-donut-wrap {
+  position: relative;
+  max-width: 260px;
+  margin: 0.5rem auto 1rem;
+}
+.hs-lms-donut-wrap canvas {
+  display: block;
+}
+.hs-lms-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding-top: 6%;
+}
+.hs-lms-donut-total {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.hs-lms-donut-sub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #64748b;
+  text-align: center;
+  max-width: 7rem;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+.hs-lms-legend--grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  justify-content: center;
+  padding-top: 0.25rem;
+}
+.hs-lms-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: calc(50% - 0.75rem);
+  font-size: 0.875rem;
+  color: #334155;
+}
+@media (min-width: 400px) {
+  .hs-lms-legend__item { min-width: auto; }
+}
+.hs-lms-legend__diamond {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  background: var(--hs-legend-color, #94a3b8);
+  border-radius: 1px;
+}
+.hs-lms-legend__label {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hs-lms-legend__count {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #0f172a;
+}
+.hs-lms-legend__empty { list-style: none; }
+.hs-lms-panel--admissions .hs-lms-panel__body { padding-bottom: 1.25rem; }

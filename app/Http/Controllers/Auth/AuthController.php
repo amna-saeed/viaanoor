@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Support\LmsAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
@@ -23,50 +25,58 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials, (bool) $request->boolean('remember'))) {
-            $request->session()->regenerate();
-            $user = Auth::user();
-
-            // If no admin exists yet, make this user admin so they can access admin/courses
-            if (! User::where('role', User::ROLE_ADMIN)->exists()) {
-                $user->update(['role' => User::ROLE_ADMIN]);
-            }
-
-            if ($user->fresh()->isAdmin()) {
-                return redirect()->intended(route('admin.dashboard'));
-            }
-            return redirect()->intended(route('student.dashboard'));
+        if (! Auth::attempt($credentials, (bool) $request->boolean('remember'))) {
+            throw ValidationException::withMessages([
+                'email' => [__('auth.failed')],
+            ]);
         }
 
-        throw ValidationException::withMessages([
-            'email' => [__('auth.failed')],
-        ]);
+        $request->session()->regenerate();
+        $user = Auth::user();
+        $user = LmsAuth::applyPostAuthRoleRules($user);
+        Auth::setUser($user);
+        LmsAuth::syncRoleToSession($request, $user);
+
+        return redirect()->intended(route(LmsAuth::dashboardRouteName($user)));
     }
 
     public function showRegisterForm()
     {
-        return view('auth.register');
+        $allowAdminOption = config('viaanoor.allow_admin_registration') || ! User::adminExists();
+
+        return view('auth.register', compact('allowAdminOption'));
     }
 
     public function register(Request $request)
     {
+        $allowAdminOption = config('viaanoor.allow_admin_registration') || ! User::adminExists();
+        $allowedRoles = $allowAdminOption
+            ? [User::ROLE_STUDENT, User::ROLE_ADMIN]
+            : [User::ROLE_STUDENT];
+
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['required', Rule::in($allowedRoles)],
         ]);
+
+        $role = $validated['role'];
 
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
-            'role' => User::ROLE_STUDENT,
+            'role' => $role,
         ]);
 
         Auth::login($user);
         $request->session()->regenerate();
+        $user = LmsAuth::applyPostAuthRoleRules($user);
+        Auth::setUser($user);
+        LmsAuth::syncRoleToSession($request, $user);
 
-        return redirect()->route('student.dashboard');
+        return redirect()->route(LmsAuth::dashboardRouteName($user));
     }
 
     public function logout(Request $request)
@@ -77,16 +87,16 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    /**
-     * When no admin exists, the logged-in user can claim admin (get access to admin dashboard and add courses).
-     */
     public function claimAdmin(Request $request)
     {
-        if (User::where('role', User::ROLE_ADMIN)->exists()) {
-            return redirect()->route('student.dashboard')->with('error', 'An admin already exists.');
+        if (User::adminExists()) {
+            $fallback = Auth::user()->isAdmin() ? 'admin.dashboard' : 'student.dashboard';
+            return redirect()->route($fallback)->with('error', 'An admin already exists.');
         }
 
         Auth::user()->update(['role' => User::ROLE_ADMIN]);
-        return redirect()->route('admin.dashboard')->with('success', 'You now have admin access. You can add and manage courses.');
+        LmsAuth::syncRoleToSession($request, Auth::user());
+
+        return redirect()->route('admin.dashboard')->with('success', 'You now have admin access.');
     }
 }

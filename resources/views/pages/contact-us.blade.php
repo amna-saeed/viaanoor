@@ -17,6 +17,7 @@
                             <h2>
                                 Get In Touch
                             </h2>
+                            <p>By booking, you agree to our Terms & Conditions and Privacy Policy.</p>
                         </div>
                         <div class="contact-list d-flex align-items-center">
                             <div class="icon">
@@ -64,9 +65,6 @@
                                         <input type="email" name="email" class="form-control" placeholder="Email*" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="website" class="form-control" placeholder="Website Address">
                             </div>
                             <div class="form-group">
                                 <textarea name="message" class="form-control textarea" placeholder="Your Message*" required></textarea>

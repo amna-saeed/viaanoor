@@ -6,6 +6,7 @@
     <title>@yield('title', 'My Dashboard') - ViaANur</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/images/fevicon.webp') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -70,10 +71,6 @@
                 </a>
                 <nav class="d-flex align-items-center gap-2">
                     <a class="nav-link active" href="{{ route('student.dashboard') }}">Dashboard</a>
-                    @if(auth()->user()->isAdmin())
-                        <a class="nav-link" href="{{ route('admin.dashboard') }}">Admin</a>
-                        <a class="nav-link" href="{{ route('admin.courses.index') }}">Add / manage courses</a>
-                    @endif
                     <span class="text-blue-50">|</span>
                     <a class="nav-link" href="{{ route('home') }}" target="_blank">View site</a>
                     
@@ -92,6 +89,11 @@
     <main class="container student-dash-content">
         @if(session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">{{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        @endif
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">{{ session('error') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         @endif

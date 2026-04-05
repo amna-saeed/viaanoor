@@ -32,6 +32,19 @@
                                 <label for="password_confirmation" class="form-label">Confirm password</label>
                                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
                             </div>
+                            <div class="mb-4">
+                                <label class="form-label">Account type</label>
+                                @if(!empty($allowAdminOption))
+                                    <select name="role" id="role" class="form-select" required>
+                                        <option value="student" {{ old('role', 'student') === 'student' ? 'selected' : '' }}>Student</option>
+                                        <option value="admin" {{ old('role') === 'admin' ? 'selected' : '' }}>Admin</option>
+                                    </select>
+                                    <small class="text-muted">Choose Admin only if you run the site / LMS. First account may register as Admin when no admin exists yet.</small>
+                                @else
+                                    <input type="hidden" name="role" value="student">
+                                    <p class="form-control-plaintext mb-0 small text-muted">Registering as <strong>Student</strong>. Admin accounts are created by an existing administrator.</p>
+                                @endif
+                            </div>
                             <button type="submit" class="default-btn2 w-100">Register</button>
                         </form>
                         <p class="mt-4 mb-0 text-center text-muted">

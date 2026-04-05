@@ -458,7 +458,7 @@
                     <div class="single-team-card position-relative">
                         <div class="image">
                             <a href="team-details.html">
-                                <img class="img-fluid-team-1" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-11 at 2.50.39 PM.jpeg') }}" alt="team-image">
+                                <img class="img-fluid-team-11" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-11 at 2.50.39 PM.jpeg') }}" alt="team-image">
                             </a>
                         </div>
                         <div class="content text-center">
@@ -471,10 +471,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <div class="single-team-card position-relative z-1">
+                    <div class="single-team-card position-relative z-12">
                         <div class="image">
                             <a href="team-details.html">
-                                <img class="img-fluid-team-2" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-11 at 2.50.14 PM.jpeg') }}" alt="team-image">
+                                <img class="img-fluid-team-12" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-11 at 2.50.14 PM.jpeg') }}" alt="team-image">
                             </a>
                         </div>
                         <div class="content text-center">
@@ -489,13 +489,13 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-team-card position-relative z-1">
                         <div class="image">
-                            <img class="img-fluid-team" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-11 at 3.36.58 PM.jpeg') }}" alt="team-image">
+                            <img class="img-fluid-team" src="{{ asset('assets/images/banner/WhatsApp Image 2026-02-26 at 8.29.33 PM.jpeg') }}" alt="team-image">
                         </div>
                         <div class="content text-center">
                             <h3>
-                               Amina Begum
+                               Sabreena Quraishi
                             </h3>
-                            <p>Islamic Studies Lead Tutor</p>
+                            <p>Early Years Lead & Primary Tutor</p>
                             <a href="{{ route('teams') }}" class="default-btn2 style-3">View More</a>
                         </div>
                     </div>
